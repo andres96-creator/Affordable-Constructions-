@@ -1,0 +1,328 @@
+# Technical Plan — Affordable Construction Marketplace
+# Author: Andres Gamboa
+# Date: February 2026
+
+This document outlines the technical architecture, database structure, API surface, and the full lead-generation blueprint for the platform.
+
+---
+
+## Takeaway
+You’re building a **lead-generation engine**, not just a website.
+That engine has **5 pillars**:
+
+1. Traffic acquisition (SEO + Paid Ads + Geo-tracking)
+2. Data capture (forms, calls, behavior tracking)
+3. Intent classification (what the homeowner needs)
+4. Contractor matching (location, skill, availability)
+5. Conversion optimization (follow-ups, automation)
+
+Below is the full blueprint.
+
+---
+
+# 🧱 1. Traffic Acquisition Layer (SEO + Paid Ads + Geo-Tracking)
+
+### 🔍 SEO Infrastructure
+
+- **Local SEO** — rank for “contractor near me”, “roof repair Framingham”, etc.
+- **Content clusters** — build pages for every service category.
+- **Schema markup** — contractor profiles, reviews, service areas.
+- **Backlink strategy** — local directories, partnerships, blogs.
+- **Geo-pages** — pages for every city/town you serve.
+
+### 📍 Geo-Tracking
+
+You track:
+
+- homeowner location
+- contractor service radius
+- device type
+- search intent
+- repeat visits
+
+Tools:
+
+- Google Tag Manager
+- GeoIP API
+- Heatmaps (Hotjar)
+- Call tracking (CallRail)
+
+### 💰 Paid Ads Infrastructure
+
+- **Google Search Ads** (high intent)
+- **Meta Ads** (awareness + retargeting)
+- **YouTube Ads** (contractor credibility)
+- **Local Service Ads** (Google Guaranteed)
+
+Campaign types:
+
+- Emergency repairs
+- Seasonal jobs
+- High-value projects
+- Contractor availability windows
+
+---
+
+# 📝 2. Data Capture Layer (Your Lead Engine)
+
+### 🧩 Lead Capture Assets
+
+- **Multi-step forms**
+- **Dynamic quote forms**
+- **Click-to-call tracking**
+- **AI chat widget**
+- **Photo upload tool**
+
+### 📦 Data You Collect
+
+- homeowner name
+- project type
+- budget
+- timeline
+- address / zip
+- photos
+- urgency level
+- preferred contact method
+
+This becomes your **matching dataset**.
+
+---
+
+# 🧠 3. Intent Classification Layer (The Brain)
+
+You categorize every homeowner request:
+
+- Emergency
+- Remodel
+- Repair
+- Maintenance
+- Inspection
+- Large project
+- Small project
+
+Using:
+
+- NLP intent detection
+- Keyword scoring
+- Form logic
+- Geo-location
+- Historical contractor performance
+
+This is where you decide **which contractor gets the lead**.
+
+---
+
+# 🛠️ 4. Contractor Matching Layer
+
+### Contractor data you store:
+
+- service categories
+- license & insurance
+- service radius
+- availability
+- response speed
+- rating
+- job acceptance rate
+- price tier
+
+### Matching logic:
+
+- homeowner location → contractor radius
+- job type → contractor specialty
+- urgency → contractor availability
+- budget → contractor tier
+- past performance → ranking score
+
+This creates a **contractor score** for each job.
+
+---
+
+# 🔁 5. Conversion Optimization Layer
+
+### Automation flows:
+
+- SMS follow-ups
+- Email reminders
+- Contractor notifications
+- Homeowner updates
+- Abandoned form recovery
+- Retargeting ads
+- Review requests
+
+### Tools:
+
+- CRM
+- Marketing automation
+- Call tracking
+- Retargeting pixels
+- Heatmaps
+- A/B testing
+
+This is where you squeeze maximum value from every lead.
+
+---
+
+# 🗺️ 6. Full System Diagram (Text Version)
+
+```
+Traffic → SEO / Ads / Geo → Landing Pages → Multi-Step Form
+        ↓
+   Intent Engine → Classify → Match → Contractor Score
+        ↓
+   CRM → Automation → SMS / Email / Calls → Conversion
+```
+
+---
+
+# 🧩 7. Additional Growth Systems
+
+### 📊 Analytics
+
+- homeowner intent trends
+- contractor performance
+- seasonal demand
+- cost per lead
+- cost per acquisition
+- ROI per category
+
+### 🔄 Feedback Loops
+
+- homeowner satisfaction
+- contractor reliability
+- job completion rate
+- review sentiment analysis
+
+### 🧱 Brand Infrastructure
+
+- blog
+- YouTube channel
+- contractor spotlight series
+- homeowner education guides
+- local community partnerships
+
+---
+
+# 🎯 8. What You End Up With
+
+A complete **home-services marketplace engine** that:
+
+- attracts homeowners
+- captures their intent
+- classifies their needs
+- matches them to contractors
+- optimizes conversions
+- scales with data
+- grows with SEO + ads
+- becomes a dominant local authority
+
+---
+
+## If you want, I can now build:
+
+- **the full SEO roadmap**
+- **the paid ads strategy**
+- **the geo-tracking system**
+- **the contractor matching algorithm**
+- **the full business model**
+
+---
+
+## Existing Technical Plan (Original Draft)
+
+### Tech Stack
+
+#### Frontend
+- Next.js (React)
+- TypeScript
+- Tailwind CSS or custom CSS
+- Vercel hosting
+
+#### Backend
+- Next.js API routes
+- Node.js
+- Authentication (NextAuth or custom)
+
+#### Database
+- PostgreSQL or MongoDB
+- Hosted on Supabase, PlanetScale, or MongoDB Atlas
+
+#### Real-Time Messaging
+- WebSockets or Pusher
+
+#### Payments
+- Stripe
+
+---
+
+## Database Structure (Draft)
+
+### Users Table
+- id
+- name
+- email
+- password_hash
+- role (customer/contractor)
+- location
+- created_at
+
+### Contractor Details Table
+- user_id
+- skills
+- price_range
+- service_radius
+- portfolio_images
+
+### Jobs Table
+- id
+- customer_id
+- title
+- description
+- budget_min
+- budget_max
+- location
+- status (open, matched, completed)
+
+### Messages Table
+- id
+- sender_id
+- receiver_id
+- content
+- timestamp
+
+### Deals Table
+- id
+- job_id
+- contractor_id
+- agreed_price
+- date
+- status
+
+---
+
+## API Routes (Draft)
+
+### /api/auth
+- login
+- register
+
+### /api/users
+- get user profile
+- update profile
+
+### /api/jobs
+- create job
+- list jobs
+- update job
+
+### /api/messages
+- send message
+- get conversation
+
+### /api/deals
+- create deal
+- update deal
+- list deals
+
+---
+
+This technical plan was created by **Andres Gamboa** as part of the original architecture documentation.
