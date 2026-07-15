@@ -1,0 +1,23 @@
+Affordable-Constructions/
+│
+├── app/                     ← safe (frontend + sanitized API routes)
+├── components/              ← safe
+├── lib/
+│   ├── supabaseClient.ts    ← safe
+│   └── supabaseServer.ts    ← sanitize before publishing
+│
+├── public/                  ← safe
+│
+├── tests/                   ← safe
+├── .github/workflows/       ← safe
+│
+├── package.json             ← safe
+├── tsconfig.json            ← safe
+├── next.config.js           ← safe
+├── tailwind.config.js       ← safe
+├── postcss.config.js        ← safe
+│
+├── README.md                ← safe
+├── LICENSE                  ← safe
+└── .env.example             ← safe (placeholder values)
+
