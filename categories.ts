@@ -1,0 +1,17 @@
+export const CATEGORY_OPTIONS = [
+  "General Construction",
+  "Handyman",
+  "Painting",
+  "Flooring",
+  "Roofing",
+  "Carpentry",
+  "Landscaping",
+  "Masonry",
+  "Drywall",
+  "Demolition",
+  "Cleaning",
+  "Property Maintenance",
+  "Plumbing",
+  "Electrical",
+  "HVAC",
+];
