@@ -1,0 +1,74 @@
+# Business Model — Affordable Construction Marketplace
+# Author: Andres Gamboa
+# Date: February 2026
+
+This document outlines the revenue model and financial structure of the Affordable Construction Marketplace.
+
+---
+
+## Core Revenue Model
+
+### 1. Commission Per Deal
+The platform is free to use. Revenue is generated through a small commission taken from each completed job agreement.
+
+### Commission Structure (Draft)
+- 5%–12% commission per completed job
+- Commission percentage may vary based on:
+  - Job size
+  - Contractor tier
+  - Customer membership level
+
+### Example:
+- Customer and contractor agree on $500
+- Platform takes 8% ($40)
+- Contractor receives $460
+
+---
+
+## Why Commission-Based?
+- Keeps the platform free for browsing
+- Encourages more users to join
+- Only charges when real value is delivered
+- Scales with platform usage
+
+---
+
+## Optional Future Revenue Streams
+
+### 1. Premium Contractor Profiles
+- Boosted visibility
+- Featured listings
+- Analytics dashboard
+
+### 2. Customer Memberships
+- Faster matching
+- Priority support
+- Discounts on commission fees
+
+### 3. Advertising
+- Local hardware stores
+- Tool rental companies
+- Construction suppliers
+
+### 4. Material Marketplace
+- Affiliate revenue from material purchases
+
+---
+
+## Cost Structure
+
+### Operating Costs
+- Hosting (Vercel, database)
+- Payment processing fees
+- SMS verification
+- Customer support
+- Marketing
+
+### Development Costs
+- Web development
+- Mobile app development
+- Maintenance
+
+---
+
+This business model was created by **Andres Gamboa** as part of the original platform documentation.
